@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products List</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles_2.css" />
+    <script>
+        function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+
+        function my2Function() {
+            var dots2 = document.getElementById("dots2");
+            var moreText2 = document.getElementById("more2");
+            var btnText2 = document.getElementById("myBtn2");
+
+            if (dots2.style.display === "none") {
+                dots2.style.display = "inline";
+                btnText2.innerHTML = "Read more";
+                moreText2.style.display = "none";
+            } else {
+                dots2.style.display = "none";
+                btnText2.innerHTML = "Read less";
+                moreText2.style.display = "inline";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="top-products">
+        <div class="container one-edge-shadow">
+            <div class="brochure-heading">
+                <h1>Pharma Brochure</h1>
+            </div>
+            <div>
+                <h3 class="brochure-sub-heading"><span>"A comprehensive guide to the range of products we offer."</span></h3>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="product-list"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const products = [
+                    "Banana Flavour", "Belgian Chocolate", "Bergamot Flavour", "Blackcurrant Flavour", "Bubble Fruit Flavour (Mint ingredients)",
+                    "Butterscotch Flavour", "Cardomom Flavour", "Chocolate Flavour", "Chocolate Mint", "Cinnamon Flavour", "Coconut Flavour",
+                    "Coolant Flavour", "Cranberry Flavour", "Creamy Vanilla Flavour", "Energy Flavor", "Energy SD Flavour", "Guava Flavour",
+                    "Holy Basil Flavur", "Lemon Flavour", "Lemon lime emulsion", "Lemont Mint Flavour", "Lychee Flavour", "Malt Flavour",
+                    "Mango Flavour", "Cardamom Flavour", "Milk Flavour", "Milk Caramel Flavour", "Milk Choclate Flavour", "Mint Flavour",
+                    "Mixed Fruit WS", "Orange Classic", "Passion Fruit Flavour", "Peppermint Flavour"
+                ];
+
+                products.sort();
+
+                const productContainer = document.querySelector('.product-list');
+                const columnCount = 3;
+                const itemsPerColumn = Math.ceil(products.length / columnCount);
+
+                const columns = Array.from({ length: columnCount }, () => []);
+
+                products.forEach((product, index) => {
+                    const columnIndex = Math.floor(index / itemsPerColumn);
+                    columns[columnIndex].push(product);
+                });
+
+                columns.forEach(column => {
+                    const columnDiv = document.createElement('div');
+                    columnDiv.className = 'product-column';
+                    productContainer.appendChild(columnDiv);
+
+                    column.forEach(product => {
+                        const productDiv = document.createElement('div');
+                        productDiv.className = 'product-item';
+                        productDiv.textContent = product;
+                        columnDiv.appendChild(productDiv);
+                    });
+                });
+            });
+        </script>
+    </section>
+
+    <footer class="copyright">
+        <div>
+            Copyright © 2024. All rights reserved by Sanctifier Flavours </a>
+        </div>
+    </footer>
+
+</body>
+</html>

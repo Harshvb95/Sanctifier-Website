@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanctifier Web</title>
+
+    <script src="index.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script>function myFunction() {
+            var dots = document.getElementById("dots");
+            var moreText = document.getElementById("more");
+            var btnText = document.getElementById("myBtn");
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.innerHTML = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.innerHTML = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+
+        function my2Function() {
+            var dots2 = document.getElementById("dots2");
+            var moreText2 = document.getElementById("more2");
+            var btnText2 = document.getElementById("myBtn2");
+
+            if (dots2.style.display === "none") {
+                dots2.style.display = "inline";
+                btnText2.innerHTML = "Read more";
+                moreText2.style.display = "none";
+            } else {
+                dots2.style.display = "none";
+                btnText2.innerHTML = "Read less";
+                moreText2.style.display = "inline";
+            }
+        }
+
+        
+    </script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "pfHsrnK4MkySUhTj9",
+            });
+    })();
+</script>
+</head>
+
+<body>
+    <nav>
+        <div class="topclass">
+            <div class="d-flex items-center">
+                <div class="container2 flex container-fluid row">
+                    <div class="branding flex items-center col-md-4">
+                        <img src="./images/LastLogo.png" width="150vw" alt="" />
+                    </div>
+
+                    <div class="name flex items-center col-md-4">
+                        <h1>Sanctifier Flavours</h1>
+                    </div>
+                    <div class="contact flex items-center col-md-4">
+                        <img src="./icons/phone-2.svg" alt="Number" />
+                        <div>
+                            <h5>Call us at : 09503070532</h5>
+                            <h6>Email : sanctifierflavours@gmail.com</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-expand-lg magic-shadow pb-3 d-flex items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse container3 flex justify-center" id="navbarNav">
+                <ul class="navbar-nav d-flex items-center">
+                    <li class="nav-item mt-3">
+                        <a href="#" class="active">Home</a>
+                    </li>
+                    <li class="nav-item mt-3 dropdown">
+                        <a href="#">Products </a>
+                        <!-- <button>Products</button> -->
+                        <div class="content">
+                            <a href="#touchdown3">Top Products</a>
+                            <a href="second.html">Food Brochure</a>
+                            <a href="third.html">Pharma Brochure</a>
+                        </div>
+                        <!-- <ul class="dropdown ">
+                            <li><a href="#">Top Products</a></li>
+                            <li><a href="#">Food Brochure</a></li>
+                            <li><a href="#">Pharma Brochure</a></li>
+                        </ul> -->
+                    </li>
+                    <li class="nav-item mt-3">
+                        <a href="#touchdown">About</a>
+                    </li>
+                    <li class="nav-item mt-3">
+                        <a href="#touchdown4">Services</a>
+                    </li>
+                    <li class="nav-item mt-3">
+                        <a href="#touchdown2">Contact Us</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="touchdown0" class="hero d-flex justify-content-between align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10 text-center">
+                    <div class="welcome mb-3" style="padding: 5px;">
+                        <h2><span>Welcome to Sanctifier Flavours</span></h2>
+                    </div>
+                    <h1 style="padding-bottom: 20px;">Enhancing the way you <span> Taste</span> the World!</h1>
+                    <div class="d-flex justify-content-center">
+                        <p class="text-center">
+                            At Sanctifier Flavours, we believe that flavour is an art, and we are passionate about creating flavours that will help you stand out in a competitive marketplace. Our portfolio of flavours includes a vast selection of natural and artificial flavours, extracts, and blends that cater to various industries, including bakery, confectionery, and beverage. <span id="dots2">...</span>
+                            <span id="more2" style="display: none;">So, whether you're a food and beverage manufacturer, a pharmaceutical company, or a nutraceutical brand, let Sanctifier Flavours be your partner in flavor.</span>
+                        </p>
+                    </div>
+                    <div>
+                        <button onclick="my2Function()" id="myBtn2" class="read-more-btn btn btn-primary">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section id="touchdown3" class="top-products">
+        <div class="container">
+            <h1 class="section-heading">Top Products</h1>
+        </div>
+
+        <div class="container2 container">
+            <h2 class="sub-heading">Top Selling Flavours in Pharma</h2>
+            <div id="carouselExampleCaptions" class="carousel slide d-flex justify-content-center container" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active carousel-indicator" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="carousel-indicator" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="carousel-indicator" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" class="carousel-indicator" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner carousel-img col-md-6" style="max-height: 500px;max-width: 500px;">
+                    <div class="carousel-item active" data-bs-interval="7000">
+                        <img src="./new-images/Strawberry1.png" class="d-block w-100" alt="Strawberry">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/Rasberry1.png" class="d-block w-100" alt="Raspberry">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/Pineapple1.png" class="d-block w-100" alt="Pineapple">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/Mango1.png" class="d-block w-100" alt="Mango">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="container2 container">
+            <h2 class="sub-heading">Top Selling Flavours in Food</h2>
+            <div id="carouselExampleCaptions2" class="carousel slide d-flex justify-content-center container" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="0" class="active carousel-indicator" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="1" class="carousel-indicator" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="2" class="carousel-indicator" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions2" data-bs-slide-to="3" class="carousel-indicator" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner carousel-img col-md-6" style="max-height: 500px;max-width: 500px;">
+                    <div class="carousel-item active" data-bs-interval="7000">
+                        <img src="./new-images/Mango1.png" class="d-block w-100" alt="Mango">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/ORANGE1.png" class="d-block w-100" alt="Orange">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/APPLE1.png" class="d-block w-100" alt="Apple">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/LEMON1.png" class="d-block w-100" alt="Lemon">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions2" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions2" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+        
+
+        
+
+        <div class="container2 container">
+            <h2 class="sub-heading">Top Flavours for Dairy</h2>
+            <div id="carouselExampleCaptions3" class="carousel slide d-flex justify-content-center container" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="active carousel-indicator" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1" class="carousel-indicator" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="2" class="carousel-indicator" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner carousel-img col-md-6" style="max-height: 500px;max-width: 500px;">
+                    <div class="carousel-item active" data-bs-interval="7000">
+                        <img src="./new-images/CHOCOLATE1.png" class="d-block w-100" alt="Chocolate">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/STRAWBERRYM1.png" class="d-block w-100" alt="Strawberry">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="7000">
+                        <img src="./new-images/Vanilla1.png" class="d-block w-100" alt="Vanilla">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions3" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions3" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+
+    <section class="about-sanctifier">
+        <div id="touchdown" class="container">
+            <h1 class="section-heading">About Us</h1>
+            <div class="about-sanctifier-wrap row">
+                <div class="col-md-6">
+                    <img src="./images/pngtree-industrial-production-of-gold-colored-bottles-image_15958151.jpg" style="width: 100%;" alt="">
+                </div>
+                <div class="col-md-6 text-center">
+                    <h2>Our Story of why we do, what we do !!.</h2>
+                    <p>Sanctifier Flavours was founded with the vision of bringing the world's diverse flavors to one convenient place. Although we began our journey in 2023, our team of experts boasts over 20 years of industry experience. We are dedicated to ensuring that every one of your needs is met with precision and care. We take pride in delivering the highest quality products that not only meet but exceed your taste expectations. 
+                     <span id="dots">...</span>.
+                        <span id="more">Our commitment is to provide you with an unparalleled culinary experience, where every product is crafted with passion and expertise. Join us in exploring a world of flavors and making every meal extraordinary.</span>
+                    </p>
+                    <button onclick="myFunction()" id="myBtn" class="btn btn-secondary">Read More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="touchdown4" class="our-services">
+        <div class="container">
+            <h1 class="section-heading">Our Services</h1>
+            <div class="row" style="
+            margin-right: 0px;
+            border-right-width: 0px;
+            margin-left: 0px;
+            padding-left: 25px;">
+                <div class="col-md-4">
+                    <div class="service-card magic-shadow-sm">
+                        <img class="icon" src="./icons/transport.svg" alt="">
+                        <h2>Pan-India Delievery</h2>
+                        <p>We offer comprehensive delivery services across India, ensuring that no matter where you are, you can enjoy our premium products without having to worry.
+                           
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card magic-shadow-sm">
+                        <img class="icon" src="./icons/bag.svg" alt="">
+                        <h2>Top Quality Products</h2>
+                        <p> Our commitment to quality is unwavering. We consistently ensure high standards with each and every product we make, so you don't have to. </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card magic-shadow-sm">
+                        <img class="icon" src="./icons/usd.svg" alt="">
+                        <h2>Affordable Price</h2>
+                        <p>We believe that great flavours should be accessible to everyone. Our products are competitively priced, providing excellent value without compromising on quality.</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    <section class="contact-us container">
+        <div id="touchdown2" class="contact-info-wrapper">
+            <h1 class="section-heading">Contact Us</h1>
+            <div class="row">
+                <div class="contact-info col-md-6">
+                    <div class="something">
+                        <h3>Connect Through</h3>
+                        <div>
+                            <img src="./icons/phone-2.svg" alt="">
+                            <div>
+                                <span>Call Us:</span>
+                                <span>+91 9503070532</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./icons/email.svg" alt="">
+                            <div>
+                                <span>Email:</span>
+                                <span>sanctifierflavours@gmail.com</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./icons/clock-2.svg" alt="">
+                            <div>
+                                <span>Working Hours</span>
+                                <span>Mon-Sat(9.00am - 5.00pm)</span>
+                            </div>
+                        </div>
+                        <div>
+                            <img src="./icons/start-filled.svg" style="height: 15%; width: 15%;"  alt="">
+                            <div>
+                                <span>Address</span>
+                                <span>Virar West</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-form feed-form col-md-6 " >
+                <div style="padding-bottom: inherit;">
+                    <h3>Contact form</h3>
+                    <div class="form-group">
+                      <!-- <h5 for="name">Name</h5> -->
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter name" required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <!-- <h5 for="email">Email</h5> -->
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter email" required
+                      />
+                    </div>
+                    <div class="form-group">
+                        <!-- <h5 for="phone">Phone No.</h5> -->
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="numero"
+                          placeholder="Enter Contact No." required
+                        />
+                      </div>
+                    <div class="form-group">
+                      <!-- <h5 for="message">Message</h5> -->
+                      <textarea class="form-control" id="message" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <button  onclick="sendMail()">Submit</button>
+                  </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="box w-100">
+                        <h3>About Us</h3>
+                        <p>Our commitment is to provide you with an unparalleled culinary experience, where every product is crafted with passion and expertise. Join us in exploring a world of flavors and making every meal extraordinary.</p>
+                           
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box w-100">
+                        <h3>Quick Links</h3>
+                        <div class="text-center">
+                            <div>
+                                <a href="#touchdown0">Home</a>
+                            </div>
+                            <div>
+                                <a href="#touchdown3">Products</a>
+                            </div>
+                            <div>
+                                <a href="#touchdown4">Services</a>
+                            </div>
+                            <div>
+                                <a href="#touchdown2">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box w-100">
+                        <h3>Follow Us</h3>
+                        <div class="text-center">
+                            <div>
+                                <a href="#">
+                                    <img src="./icons/facebook.svg" alt="">
+                                    <span>Facebook</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./icons/instagram.svg" alt="">
+                                    <span>Instagram</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./icons/twitter.svg" alt="">
+                                    <span>Twitter</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#">
+                                    <img src="./icons/google.svg" alt="">
+                                    <span>Google</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="copyright">
+        <div>
+            Copyright © 2023 .All rights reserved by </a>.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

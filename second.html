@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products List</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles_2.css" />
+</head>
+<body>
+    <header class="top-products">
+        <div class="container one-edge-shadow">
+            <div class="brochure-heading">
+                <h1>Food Brochure</h1>
+            </div>
+            <div>
+                <h3 class="brochure-sub-heading">
+                    <span>"A comprehensive guide to the range of products we offer."</span>
+                </h3>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="product-list"></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const products = [
+                    "Achari Masti Flavour", "Banana Flavour", "Banana SD Powder", "Belgian Choclate", "Bergamot Flavour",
+                    "Blackcurrant Flavour", "Blackcurrant Flavour OS", "Bubble Fruit Flavour", "Butter Flavour", "Butterscotch Flavour",
+                    "Cardomom Flavour", "Chatak Patak Flavour", "Cheese flavour", "Chilly Flavour", "Choclate Brownie Flavour",
+                    "Choclate Flavour", "Cinnamon Flavour", "Coconut Flavour", "Coconut Malai Flavour", "Cola Flavour OS",
+                    "Coolant Flavour", "Coriander Leaf Flavour", "Cranberry Flavour", "Creamy Vanilla Flavour", "Cumin Roasted Flavour",
+                    "Energy Flavor", "Energy SD Flavour", "Ghee Flavour", "Ginger Ale", "Ginger Ale Natural flavour",
+                    "Guava Flavour", "Holy Basil Flavorr", "Jalpeno Flavour", "Jamun flavour", "Jeera Masala",
+                    "Jeera Masala SD", "Kaju Kaltli Flavour", "Kesar OS", "Kopra flavour", "Kopra flavour OS",
+                    "Kulfi Flavour", "Lemon Flavour", "Lemon lime emulsion", "Lemont Mint", "LimeChat",
+                    "Lychee Flavour", "Mango Flavour", "Mango SD Powder", "Meetha Elaichi", "Milk Caramel Flavour",
+                    "Milk Choclate Powder Flavour", "Milk Flavour", "Mint Flavour", "Mixed Fruit WS", "Orange Classic",
+                    "Orange Powder Flavour", "Pan Flavour", "Pan masala flavour", "Passion Fruit Flavour", "Peppermint Flavour",
+                    "Pineapple Powder Flavour", "Pizza Flavour", "Pomegranate Flavour", "Pudina Flavour (spearmint)", "Raisin Flavour",
+                    "Rajbhog Flavour", "Raspberry Flavour", "Rose Flavour", "Royal Elaichi Flavour", "Strawberry Flavour",
+                    "Sweet Juicy Tomato Flavour", "Tamarind Flavour", "Tomato Flavour", "Vanilla Cream Flavour", "Vanilla powder flavour",
+                    "Water Melon SD Powder"
+                ];
+
+                products.sort();
+
+                const productContainer = document.querySelector('.product-list');
+                const columnCount = 3;
+                const itemsPerColumn = Math.ceil(products.length / columnCount);
+
+                const columns = Array.from({ length: columnCount }, () => []);
+
+                products.forEach((product, index) => {
+                    const columnIndex = Math.floor(index / itemsPerColumn);
+                    columns[columnIndex].push(product);
+                });
+
+                columns.forEach(column => {
+                    const columnDiv = document.createElement('div');
+                    columnDiv.className = 'product-column';
+                    productContainer.appendChild(columnDiv);
+
+                    column.forEach(product => {
+                        const productDiv = document.createElement('div');
+                        productDiv.className = 'product-item';
+                        productDiv.textContent = product;
+                        columnDiv.appendChild(productDiv);
+                    });
+                });
+            });
+        </script>
+    </section>
+    <footer class="copyright">
+        <div>
+            Copyright © 2024. All rights reserved by Sanctifier Flavours </a>
+        </div>
+    </footer>
+</body>
+</html>
